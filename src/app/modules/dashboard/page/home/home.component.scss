@@ -1,0 +1,158 @@
+.header{
+    width: 100%;
+    margin-bottom: 5%;
+    display: flex;
+    &__logout{
+        display: flex;        
+        justify-content: flex-end; 
+        width: 80%;       
+        span{
+            padding-right: 15px;
+            padding-left: 15px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            background-color: white;
+            border-color:#007AFF;
+            border-radius: 6%;
+            color: #007AFF;
+            font-family: sans-serif;
+            font-size: 14px;
+            font-weight: 600;            
+            border: 2px solid;
+            cursor: pointer;
+            &:hover {
+                background-color: rgb(250, 250, 250);
+                box-shadow: 1px 2px 34px -12px rgba(90,87,87,1);
+              }
+        }
+    }
+    &__icon{  
+    display: flex;
+    width: 11%;
+    justify-content: flex-end;      
+    }
+}
+
+
+.dashboard{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    &__information{
+        width: 60%;
+        display: flex;
+        flex-direction: column;        
+        &__register{
+            width: 90%;
+            margin-bottom: 5%;            
+            box-shadow: 1px 2px 34px -12px rgba(90,87,87,1);
+            -webkit-box-shadow: 1px 2px 34px -12px rgba(90,87,87,1);
+            -moz-box-shadow: 1px 2px 34px -12px rgba(90,87,87,1);            
+            padding: 40px;
+            &__section{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                &__form{
+                    &__item{
+                        margin-top: 10px;
+                        input{
+                            width: 100%;
+                            padding: 7px;
+                        }
+                        label{
+                            font-family: sans-serif;
+                            font-weight: 600;
+                            font-size: 15px;
+                        }
+                    }
+                    &__button{
+                        display: flex;
+                        justify-content: flex-end;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        &__list{            
+            overflow-x: hidden;
+            overflow-y: scroll;            
+            height: 470px;
+            &--items{
+                font-family: sans-serif;
+                font-weight: 600;
+                font-size: 20px;
+                color: #008DF3;
+                padding-left: 12px;
+                margin-bottom: 10px;
+                &--number{
+                    color: red;
+                }
+            }
+            &__header{
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                margin-bottom: 1%;
+                font-family: sans-serif;
+                font-weight: 600;
+                font-size: 25px;
+                color: #008DF3;
+                &__option{
+                    cursor: pointer;
+                    color: red;
+                }
+            }
+            &__description{
+                font-family: sans-serif;
+                font-weight: 200;
+            }
+            ul{
+                padding-left: 10px;
+            }
+            li{      
+                list-style-type:none;
+                width: 90%;
+                margin-top: 2%;
+                box-shadow: 1px 2px 34px -12px rgba(90,87,87,1);
+                -webkit-box-shadow: 1px 2px 34px -12px rgba(90,87,87,1);
+                -moz-box-shadow: 1px 2px 34px -12px rgba(90,87,87,1);            
+                padding: 26px;
+            }
+        }
+    }
+    &__profile{
+        width: 200px;
+        height: 190px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 1px 2px 34px -12px rgba(90,87,87,1);
+        -webkit-box-shadow: 1px 2px 34px -12px rgba(90,87,87,1);
+        -moz-box-shadow: 1px 2px 34px -12px rgba(90,87,87,1);            
+        padding: 40px;
+        &__photo{  
+            img{
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                border-radius: 50%;
+            } 
+                     
+        }
+        &__information{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: revert;
+            font-weight: 600;
+            font-size: 15px;
+            span{
+                margin-top: 4px;
+                margin-bottom: 4px;
+            }
+        }
+    }
+}

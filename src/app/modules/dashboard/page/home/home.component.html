@@ -1,0 +1,77 @@
+<div class="home">
+    
+    <div class="header">
+        <div class="header__icon">                      
+        </div>
+        <div class="header__logout">
+            <span (click)="authService.logout()" >LOGOUT</span>
+        </div>
+    </div>
+
+    <div class="dashboard">    
+        
+        <div class="dashboard__profile">
+            <div class="dashboard__profile__photo">
+                <img src="{{profileUser?.avatar}}">
+            </div>
+            <div class="dashboard__profile__information">
+               <span>{{profileUser?.name}}</span>     
+               <span>{{profileUser?.email}}</span>     
+            </div>
+        </div> 
+
+        <div class="dashboard__information">
+           
+            <div class="dashboard__information__register">           
+                <form class="dashboard__information__register__section" [formGroup]="group">
+                    <div class="dashboard__information__register__section__form">
+                        <div class="dashboard__information__register__section__form__item">
+                            <div>
+                                <label>Url To Save</label>
+                            </div>
+                            <div>
+                                <input type="text" formControlName="name" required />
+                            </div>                                
+                        </div> 
+                        <div class="dashboard__information__register__section__form__item">
+                            <div>
+                                <label>Name To Save</label>
+                            </div>
+                            <div>
+                                <input type="text" formControlName="url" required />
+                            </div>                                
+                        </div>                                        
+                        <div class="dashboard__information__register__section__form__button">
+                            <app-button [buttonName]="'ADD'" (handleClickEmmiter)="handleClickRegisterUrl($event)"></app-button> 
+                        </div>  
+                    </div>
+                </form>        
+            </div>
+    
+            <span *ngIf="urls.length" class="dashboard__information__list--items">Number of current urls <span class="dashboard__information__list--items--number">{{urls.length}}</span></span>
+
+            <div *ngIf="urls.length" class="dashboard__information__list">            
+                <ul *ngFor="let url of urls">
+                    <li>
+                        <div class="dashboard__information__list__header">
+                            <div class="dashboard__information__list__header__title">{{url.name}}</div>
+                            <div class="dashboard__information__list__header__option">
+                                <span (click)="deleteUrl(url.id)">
+                                    <i class="fas fa-trash-alt"></i>
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard__information__list__description">
+                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint .
+                        </div>                    
+                    </li>
+                </ul>
+            </div>
+    
+        </div>
+    
+    </div>
+</div>
+
+

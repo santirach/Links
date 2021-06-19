@@ -1,0 +1,42 @@
+<div class="register">
+    <div class="register__header">        
+        <div class="register__header__logout">
+            <span (click)="redirectToLogin()">LOGIN</span>
+        </div>
+    </div>
+    <form class="register__section" [formGroup]="group">
+        <div class="register__section__title">
+            SIGNUP
+        </div>
+        <div class="register__section__form">
+            <div class="register__section__form__item">
+                <div>
+                    <label>Full name</label>
+                </div>
+                <div>
+                    <input type="text"  formControlName="nombre" required />
+                </div>                                
+            </div>
+            <div class="register__section__form__item">
+                <div>
+                    <label>Your Email</label>
+                </div>
+                <div>
+                    <input type="text" formControlName="correo" required />
+                </div>                                
+            </div>
+            <div class="register__section__form__item">
+                <div>
+                    <label>Password</label>
+                </div>
+                <div>
+                    <input type="password" formControlName="contrasena" required />
+                </div>                                
+            </div>
+            <div class="register__section__form__button">
+                <app-button [buttonName]="'SIGNUP'" (handleClickEmmiter)="handleClickRegister($event)"></app-button> 
+            </div>  
+        </div>
+    </form>
+
+</div>
